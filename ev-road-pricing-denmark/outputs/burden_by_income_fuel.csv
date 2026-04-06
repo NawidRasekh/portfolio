@@ -1,0 +1,7 @@
+income_mapped,car,Mean paid (DKK),VKT lost (km),Burden (% of base cost),Dropout %,Count
+high,Electricity,7872.2,1961.3,53.1,0.0,705
+high,Fossil,7626.7,1731.2,46.8,0.0,280
+low,Electricity,4659.3,2918.6,37.8,0.0,87
+low,Fossil,5829.1,2660.4,39.6,0.0,398
+medium,Electricity,6353.5,2254.7,47.3,0.0,708
+medium,Fossil,6494.2,2064.1,42.2,0.0,822
