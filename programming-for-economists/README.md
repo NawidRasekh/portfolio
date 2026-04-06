@@ -3,7 +3,7 @@
 
 *BSc Economics, University of Copenhagen — Programming for Economists (2025)*
 
-Three projects spanning structural inflation analysis, labour-supply modelling under nonlinear taxation, and computational general equilibrium — each combining formal economic theory with production-quality Python implementation.
+Two projects combining formal economic theory with production-quality Python implementation: labour-supply modelling under nonlinear taxation, and computational general equilibrium.
 
 ---
 
@@ -11,44 +11,12 @@ Three projects spanning structural inflation analysis, labour-supply modelling u
 
 | # | Title | Methods | Key result |
 |---|-------|---------|------------|
-| 1 | [Structural Inflation Analysis](#1-structural-inflation-analysis) | Time-series API pipelines, CPI/HICP decomposition | Danish CPI and HICP track with r > 0.99; persistent 3–5 point wedge driven by owner-occupied housing |
-| 2 | [Labour Supply with a Kinked Budget Constraint](#2-labour-supply-with-a-kinked-budget-constraint) | Constrained optimisation, FOC root-finding, welfare analysis | ~40% of workers bunch at the kink; top tax reduces Gini by ~15%; FOC solver is 5–10× faster than black-box minimiser |
-| 3 | [Applied General Equilibrium](#3-applied-general-equilibrium) | Walrasian equilibrium, tâtonnement, AS-AD macro model | Three equilibria under CES gross complements; Newton-Raphson converges in < 20 iterations vs. hundreds for tâtonnement |
+| 1 | [Labour Supply with a Kinked Budget Constraint](#1-labour-supply-with-a-kinked-budget-constraint) | Constrained optimisation, FOC root-finding, welfare analysis | ~40% of workers bunch at the kink; top tax reduces Gini by ~15%; FOC solver is 5–10× faster than black-box minimiser |
+| 2 | [Applied General Equilibrium](#2-applied-general-equilibrium) | Walrasian equilibrium, tâtonnement, AS-AD macro model | Three equilibria under CES gross complements; Newton-Raphson converges in < 20 iterations vs. hundreds for tâtonnement |
 
 ---
 
-## 1. Structural Inflation Analysis
-
-**Folder:** [`01_dataproject/`](01_dataproject/)
-
-### Problem
-
-National CPI and the EU-harmonised HICP index are often treated as interchangeable, but they differ in their treatment of owner-occupied housing. Understanding this wedge matters for monetary-policy evaluation: the ECB targets HICP, while Danish labour contracts are often indexed to the national CPI.
-
-### Data and pipeline
-
-Two live API sources are merged programmatically:
-
-- **Danmarks Statistik** (`PRIS113`) — monthly national CPI, 2015=100
-- **FRED/Eurostat** — HICP for Denmark, Austria, Euro Area, and the United States, via `pandas_datareader`
-
-The `InflationAnalysis` class handles the full pipeline from API call to chart export, making the analysis fully reproducible without any manual data download.
-
-### Key findings
-
-- Over 2019–2024, Danish CPI and HICP maintain a **Pearson correlation of r > 0.99**, confirming that both indices track the same underlying inflation cycle.
-- A **persistent index-point gap of 3–5 points** (CPI − HICP) is visible throughout, which the model attributes to owner-occupied housing costs — a component included in CPI but excluded from HICP.
-- During the 2021–2023 inflationary episode, Denmark's peak 12-month inflation rate reached **approximately 10%** — broadly aligned with the Euro Area, suggesting the shock was driven by common external factors (energy, supply chains) rather than domestic overheating.
-
-### Visualisations
-
-| HICP Levels | 12-Month Inflation Rates | CPI vs HICP Comparison |
-|:-----------:|:------------------------:|:----------------------:|
-| ![HICP Levels](01_dataproject/figures/hicp_levels.png) | ![Inflation Rates](01_dataproject/figures/inflation_12m.png) | ![CPI vs HICP](01_dataproject/figures/cpi_vs_hicp.png) |
-
----
-
-## 2. Labour Supply with a Kinked Budget Constraint
+## 1. Labour Supply with a Kinked Budget Constraint
 
 **Folder:** [`02_modelproject/`](02_modelproject/)
 
@@ -107,7 +75,7 @@ Introducing the top tax improves the SWF despite the labour-supply distortion, b
 
 ---
 
-## 3. Applied General Equilibrium
+## 2. Applied General Equilibrium
 
 **Folder:** [`03_examproject/`](03_examproject/)
 
@@ -163,7 +131,7 @@ Three independent problems combining applied microeconomics, general equilibrium
 |----------|-------|
 | Language | Python 3.10+ |
 | Data wrangling | `pandas`, `numpy` |
-| Statistical APIs | `dstapi` (Danmarks Statistik), `pandas_datareader` (FRED) |
+| Statistical APIs | `dstapi` (Danmarks Statistik) |
 | Optimisation | `scipy.optimize.minimize_scalar`, `scipy.optimize.root_scalar` (Brent's method) |
 | Visualisation | `matplotlib`, `seaborn` |
 | Economic methods | FOC root-finding on kinked constraints, tâtonnement, Newton-Raphson price adjustment, CES demand derivation, Gini/Lorenz inequality analysis, SWF maximisation |
@@ -175,23 +143,20 @@ Three independent problems combining applied microeconomics, general equilibrium
 **Install dependencies:**
 
 ```bash
-pip install pandas numpy matplotlib seaborn scipy pandas_datareader dstapi openpyxl
+pip install pandas numpy matplotlib seaborn scipy dstapi openpyxl
 ```
 
 **Run each project notebook:**
 
 ```bash
-# Project 1 — Inflation analysis
-jupyter notebook 01_dataproject/dataproject_final.ipynb
-
-# Project 2 — Labour supply model
+# Project 1 — Labour supply model
 jupyter notebook 02_modelproject/Modelproject_final.ipynb
 
-# Project 3 — General equilibrium exam
+# Project 2 — General equilibrium exam
 jupyter notebook 03_examproject/Examproject.ipynb
 ```
 
-Note: Projects 1 and 3 fetch live data from Danmarks Statistik and FRED. An internet connection is required; results may differ slightly from the notebook outputs if the source data has been updated.
+Note: The exam project fetches live house price and CPI data from Danmarks Statistik. An internet connection is required; results may differ slightly from the notebook outputs if the source data has been updated.
 
 ---
 
