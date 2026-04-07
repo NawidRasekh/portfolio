@@ -39,7 +39,7 @@ import time
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from question3 import TopTaxWorker
+from kinked_budget_worker import TopTaxWorker
 
 
 # Constants and Parameters

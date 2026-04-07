@@ -46,7 +46,7 @@ The kink threshold in labour-supply space is:
 
 import numpy as np
 from scipy.optimize import minimize_scalar, root_scalar
-from Worker import WorkerClass
+from worker import WorkerClass
 
 
 class TopTaxWorker(WorkerClass):
