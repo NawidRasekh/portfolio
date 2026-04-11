@@ -8,7 +8,7 @@
 ## The question
 
 In a pure exchange economy with two agents, two goods, and CES preferences,
-we know — analytically — that gross complements ($\rho < 0$) can produce
+we know, analytically, that gross complements ($\rho < 0$) can produce
 *multiple* Walrasian equilibria. But which equilibrium does a given price
 adjustment process actually find, and how does the answer depend on the
 algorithm?
