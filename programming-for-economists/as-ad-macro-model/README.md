@@ -92,7 +92,7 @@ as-ad-macro-model/
 └── README.md
 ```
 
-The class exposes a small, focused API:
+The class has a small, clean interface:
 
 ```python
 model = ASADModelClass()
