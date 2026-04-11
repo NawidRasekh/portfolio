@@ -101,10 +101,7 @@ exchange-economy-ces/
 └── README.md
 ```
 
-The model class exposes a clean separation between the economic primitives
-(utilities, demands) and the algorithmic primitives (`tatonnement`,
-`newton_raphson_dampened`, `find_unique_equilibria`), so the same model
-can be solved with either method without rewriting the economy.
+The model class keeps economic primitives (utilities, demands) separate from the algorithmic ones (`tatonnement`, `newton_raphson_dampened`, `find_unique_equilibria`), so the same model can be solved with either method without rewriting the economy.
 
 ---
 
