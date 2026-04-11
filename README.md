@@ -1,8 +1,7 @@
 # Nawid Rasekh | Economics Portfolio
 
 BSc Economics student at the University of Copenhagen, currently in the
-fourth semester. This repository collects my quantitative projects at the
-intersection of applied economics, public policy, and computational methods.
+fourth semester. This repository collects my quantitative projects spanning applied economics, public policy, and computational methods.
 
 I write production-quality Python, build models from first principles
 rather than calling black-box solvers, and try to make every project
@@ -44,8 +43,7 @@ their pre-2008 real peak** more than a decade after the financial crisis.
 Computational labour-supply model with a piecewise-linear two-bracket tax
 schedule. A four-step FOC solver handles the kink that breaks naive
 optimisers, and a 10 000-worker population simulation shows that
-**~40% of workers bunch at the kink**, the computational analogue of the
-empirical bunching masses documented by Saez (2010) and Kleven & Waseem
+**~40% of workers bunch at the kink**, matching the bunching patterns documented by Saez (2010) and Kleven & Waseem
 (2013). The top tax improves social welfare and cuts the consumption Gini
 by ~15% in the calibrated economy.
 
