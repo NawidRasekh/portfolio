@@ -9,8 +9,7 @@ A computational labour-supply model built from first principles. The project
 moves through three stages: (1) a baseline worker with a smooth budget
 constraint and analytical FOC, (2) a government sector that weighs private
 utility against public-good provision, and (3) a two-bracket income tax that
-creates a kink in the budget constraint — requiring a dedicated solver to
-find the true optimum.
+creates a kink in the budget constraint, requiring a dedicated solver to find the true optimum.
 
 ---
 
@@ -76,8 +75,7 @@ above an income threshold $\kappa$:
 $$T(y) = \tau y + \zeta + \omega \cdot \max(y - \kappa, 0)$$
 
 The kink creates a discontinuity in the marginal tax rate at
-$\ell^{\kappa} = \kappa / (w \cdot p)$ — and therefore in the derivative of
-the budget constraint. A naive interior-solution optimiser may fail silently,
+$\ell^{\kappa} = \kappa / (w \cdot p)$, and therefore in the derivative of the budget constraint. A naive interior-solution optimiser may fail silently,
 because the FOC has no solution at the kink itself even though the kink can
 be the true welfare-maximising labour supply.
 
@@ -86,9 +84,9 @@ be the true welfare-maximising labour supply.
 For every productivity level $p$, check all three candidate optima and take
 the best:
 
-1. **Lower-bracket interior** — solve $\varphi(p, \ell;\, \tau) = 0$ on $[0, \ell^{\kappa})$ via Brent's method.
-2. **At the kink** — evaluate utility directly at $\ell^{\kappa}$. The kink is a valid global maximum whenever the marginal utility of working shifts from positive below $\ell^{\kappa}$ to negative above it.
-3. **Upper-bracket interior** — solve $\varphi(p, \ell;\, \tau + \omega) = 0$ on $(\ell^{\kappa}, \ell_{\max}]$.
+1. **Lower-bracket interior**: solve $\varphi(p, \ell;\, \tau) = 0$ on $[0, \ell^{\kappa})$ via Brent's method.
+2. **At the kink**: evaluate utility directly at $\ell^{\kappa}$. The kink is a valid global maximum whenever the marginal utility of working shifts from positive below $\ell^{\kappa}$ to negative above it.
+3. **Upper-bracket interior**: solve $\varphi(p, \ell;\, \tau + \omega) = 0$ on $(\ell^{\kappa}, \ell_{\max}]$.
 
 Comparing utilities across the three candidates and selecting the global
 maximum guarantees correctness under the kinked budget. Splitting the domain
@@ -99,9 +97,7 @@ smaller interval.
 
 **Bunching at the kink.** With $\omega = 0.2$, $\kappa = 9.0$, approximately
 **40% of the simulated workforce (10 000 log-normal workers) chooses exactly
-$\ell^{\kappa}$** — the computational analogue of the empirical bunching
-masses documented by Saez (2010) for the US and Kleven & Waseem (2013) for
-Pakistan.
+$\ell^{\kappa}$**, consistent with the bunching documented by Saez (2010) for the US and Kleven & Waseem (2013) for Pakistan.
 
 ![Bunching at the kink](figures/labour_supply_10_cell29.png)
 
@@ -119,8 +115,7 @@ cost. Redistribution wins on net under the calibrated parameters.
 ![Lorenz curve and welfare](figures/labour_supply_11_cell29.png)
 
 **Optimal policy search.** A grid search over $(\omega, \kappa) \in [0, 0.35] \times [6, 12]$
-shows the calibrated parameters sit near but not exactly at the welfare
-maximum — suggesting scope for marginal improvement under a finer search.
+shows the calibrated parameters sit near but not exactly at the welfare maximum; a finer grid search would improve on them.
 
 ---
 
@@ -137,9 +132,7 @@ labour-supply-kinked-tax/
 └── README.md
 ```
 
-Economic logic lives in the `.py` modules (one class per model); the notebook
-is used only for exploration and presentation. This makes each model reusable
-in isolation and keeps the notebook readable.
+Economic logic stays in the `.py` modules; the notebook is for presentation only.
 
 ---
 
