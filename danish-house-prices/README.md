@@ -41,7 +41,7 @@ series.
 
 The module implementing all of this, `house_price_analysis.py`, exposes a
 single `DanishHousePrices` class with methods for fetching, deflating,
-ranking, and plotting — keeping the notebook free of boilerplate.
+ranking, and plotting — so the notebook stays clean.
 
 ---
 
@@ -69,9 +69,7 @@ quadrupled" collapse once you adjust for the general price level.
 
 The correlation between **initial price level (1992) and total real growth**
 is **r ≈ 0.6–0.7** at the municipality level. Expensive municipalities did
-not mean-revert; they became relatively *more* expensive. This is the
-computational counterpart to the polarisation narrative in the housing
-literature.
+not mean-revert; they became relatively *more* expensive. The pattern mirrors what the housing literature documents as polarisation.
 
 ### 4. The financial crisis cast a long shadow on peripheral markets
 
@@ -79,8 +77,7 @@ literature.
 
 A 4-quarter rolling-average analysis shows that several peripheral
 municipalities are **still trading below their pre-2008 real peak**, more
-than a decade after the crisis. The correction was not symmetrically
-reversed.
+than a decade after the crisis. 
 
 ---
 
