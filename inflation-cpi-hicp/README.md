@@ -1,4 +1,4 @@
-# CPI vs. HICP — International Inflation Comparison
+# CPI vs. HICP: International Inflation Comparison
 
 *BSc Economics, University of Copenhagen — Programming for Economists, Data Project (2025)*
 *Group: Nawid Rasekh, Kasper Vinther, Mads Wittrup · this section (Section 2) authored by Nawid Rasekh*
