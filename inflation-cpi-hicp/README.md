@@ -49,9 +49,7 @@ $\pi_t = 100 \cdot (P_t / P_{t-12} - 1)$.
 | Mean absolute difference in index level | **0.42 index points** |
 | Maximum deviation | < 1 index point |
 
-The two indices track each other closely enough that using HICP for
-cross-country comparisons introduces no meaningful bias against Danish CPI
-as the domestic reference.
+Close enough that HICP can substitute for CPI in cross-country comparisons without meaningful distortion.
 
 ![CPI vs. HICP](figures/cpi_vs_hicp.png)
 
@@ -99,9 +97,7 @@ analysis.plot_hicp_levels()
 analysis.plot_inflation_rates()
 ```
 
-Separating the data pipeline (`.py` module) from the presentation
-(`.ipynb` notebook) means the analysis can be re-run against fresher data
-without touching the notebook, and the class can be reused in other projects.
+The `.py` module handles all data and logic; the notebook is for presentation only. Re-running against new data requires no changes to the notebook.
 
 ---
 
