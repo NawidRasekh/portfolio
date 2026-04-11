@@ -1,4 +1,4 @@
-# Danish House Prices — Real vs. Nominal
+# Danish House Prices: Real vs. Nominal
 
 *BSc Economics, University of Copenhagen — Programming for Economists, Exam Project (2025)*
 *Group exam project (Nawid Rasekh, Kasper Vinther, Mads Wittrup) · this problem authored by Nawid Rasekh*
