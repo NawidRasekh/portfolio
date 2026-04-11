@@ -1,4 +1,4 @@
-# Nawid Rasekh — Economics Portfolio
+# Nawid Rasekh | Economics Portfolio
 
 BSc Economics student at the University of Copenhagen, currently in the
 fourth semester. This repository collects my quantitative projects at the
@@ -6,7 +6,7 @@ intersection of applied economics, public policy, and computational methods.
 
 I write production-quality Python, build models from first principles
 rather than calling black-box solvers, and try to make every project
-*reproducible* — public APIs over manual downloads, fixed seeds over
+*reproducible*: public APIs over manual downloads, fixed seeds over
 hand-tuned demos, and embedded notebook outputs so the results are visible
 without cloning the repo.
 
@@ -44,7 +44,7 @@ their pre-2008 real peak** more than a decade after the financial crisis.
 Computational labour-supply model with a piecewise-linear two-bracket tax
 schedule. A four-step FOC solver handles the kink that breaks naive
 optimisers, and a 10 000-worker population simulation shows that
-**~40% of workers bunch at the kink** — the computational analogue of the
+**~40% of workers bunch at the kink**, the computational analogue of the
 empirical bunching masses documented by Saez (2010) and Kleven & Waseem
 (2013). The top tax improves social welfare and cuts the consumption Gini
 by ~15% in the calibrated economy.
@@ -52,7 +52,7 @@ by ~15% in the calibrated economy.
 `Python` · `SciPy` · `Brent's method` · `welfare analysis` · `Lorenz/Gini`
 
 ### [inflation-cpi-hicp](./inflation-cpi-hicp/)
-**CPI vs. HICP — International Inflation Comparison**
+**CPI vs. HICP: International Inflation Comparison**
 
 Tests whether Danish CPI and HICP can be used interchangeably for
 cross-country comparisons (correlation = 0.9994), then benchmarks Danish
@@ -63,7 +63,7 @@ FRED.
 `Python` · `pandas` · `dstapi` · `pandas-datareader` · `time-series alignment`
 
 ### [programming-for-economists](./programming-for-economists/)
-**Group exam contributions — General Equilibrium and AS-AD**
+**Group exam contributions: General Equilibrium and AS-AD**
 
 Two exam-project problems where my groupmates wrote the primary
 implementation: a Walrasian exchange economy with CES preferences (three
@@ -100,4 +100,4 @@ jupyter notebook notebook.ipynb
 
 ---
 
-*Nawid Rasekh — [GitHub](https://github.com/NawidRasekh) · BSc Economics, University of Copenhagen*
+*Nawid Rasekh · [GitHub](https://github.com/NawidRasekh) · BSc Economics, University of Copenhagen*
