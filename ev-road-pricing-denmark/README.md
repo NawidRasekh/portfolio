@@ -1,8 +1,7 @@
 # Road Pricing in Denmark's Electric Vehicle Transition: A Welfare Analysis of VKT Externalities
 
 > Quantitative policy analysis examining how differentiated road pricing can internalise the
-> externalities of Vehicle Kilometres Travelled (VKT) as Denmark's car fleet electrifies —
-> with a focus on congestion, distributional equity, and net social welfare across the
+> externalities of Vehicle Kilometres Travelled (VKT) as Denmark's car fleet electrifies, with a focus on congestion, distributional equity, and net social welfare across the
 > 2026–2035 transition period.
 
 ---
@@ -23,8 +22,7 @@ This project models five road-pricing policy scenarios against that backdrop, us
 ## Key Findings
 
 ### The Externality Mismatch
-City-peak driving accounts for **13% of total VKT but 49% of all road externalities** — driven
-almost entirely by congestion costs. This means a flat per-km tax is a blunt instrument;
+City-peak driving accounts for **13% of total VKT but 49% of all road externalities**, driven almost entirely by congestion costs. This means a flat per-km tax is a blunt instrument;
 pricing needs to be segment-differentiated to be both efficient and fair.
 
 ![VKT vs Externality Share](figures/02_vkt_share_vs_externality_share.png)
@@ -46,7 +44,7 @@ CO₂ falls from 4.7 to 2.2 million tonnes annually.
 | Annual fee 5 000 DKK | 13.8 | −1.76 | 7.8% | 107 |
 | City fee 1 000 DKK | 3.0 | +0.003 | 0.8% | 17 |
 
-**Key insight:** Full Pigouvian taxation maximises environmental impact but destroys consumer
+Full Pigouvian taxation maximises environmental impact but destroys consumer
 surplus to the point of negative net welfare. The 100% Pigouvian rate overcorrects. Our Proposal
 captures 84% of the Pigouvian welfare gain while raising 9% more revenue and causing significantly
 less distributional harm.
@@ -55,7 +53,7 @@ less distributional harm.
 
 ### Distributional Analysis
 The annual fee (5 000 DKK) is the most regressive instrument: it drives 14% of drivers out of car
-ownership entirely — disproportionately low-income, rural drivers with no transport alternatives.
+ownership entirely. The burden falls disproportionately on low-income, rural drivers with no transport alternatives.
 Our Proposal (per-km + city fee) causes near-zero dropout while distributing the burden more
 evenly across income groups.
 
@@ -163,23 +161,22 @@ python figurer.py
 jupyter notebook analysis.ipynb
 ```
 
-The ZIP archive in `data/` is extracted automatically on first run — no manual setup needed.
+The ZIP archive in `data/` is extracted automatically on first run. No manual setup needed.
 
 ---
 
 ## Tools & Methods
 
-- **Python** (pandas, NumPy, matplotlib) — data processing, model simulation, visualisation
-- **Welfare economics framework** — consumer surplus integral, Pigouvian tax theory, deadweight loss
-- **Heterogeneous agent modelling** — driver-level elasticity estimation with demographic interactions
-- **Scenario analysis** — 8 policy scenarios × 2 elasticity models × 3 time horizons = 48 runs
-- **Distributional analysis** — tax incidence decomposed by income group and fuel type
-- **AI-assisted development** — Claude (Anthropic) used throughout for model specification review,
-  economic interpretation, and code quality; all analytical judgements and results verified independently
+- **Python** (pandas, NumPy, matplotlib): data processing, model simulation, visualisation
+- **Welfare economics framework**: consumer surplus integral, Pigouvian tax theory, deadweight loss
+- **Heterogeneous agent modelling**: driver-level elasticity estimation with demographic interactions
+- **Scenario analysis**: 8 policy scenarios × 2 elasticity models × 3 time horizons = 48 runs
+- **Distributional analysis**: tax incidence decomposed by income group and fuel type
+
 
 ---
 
 ## Author
 
-**Nawid Rasekh** — BSc Economics, University of Copenhagen
+**Nawid Rasekh**, BSc Economics, University of Copenhagen
 Group project, PCC 2026 case competition
